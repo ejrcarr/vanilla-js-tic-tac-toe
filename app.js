@@ -46,6 +46,8 @@ const displayController = (() => {
 	};
 
 	const _createBoardTileDivs = (size) => {
+		gameBoardContainer.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
+		gameBoardContainer.style.gridTemplateRows = `repeat(${size}, 1fr)`;
 		for (let i = 0; i < size * size; i++) {
 			const boardTileButton = document.createElement('button');
 			boardTileButton.classList.add('board-tile');
@@ -69,6 +71,9 @@ const displayController = (() => {
 
 	const renderTile = (index, marker) => {
 		const boardTile = document.getElementById(`${index}`);
+		// const h1 = document.createElement('h1');
+		// h1.textContent = marker;
+		// boardTile.appendChild(h1);
 		boardTile.textContent = marker;
 	};
 	return { renderTile };
