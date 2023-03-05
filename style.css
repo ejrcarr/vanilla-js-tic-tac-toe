@@ -36,9 +36,11 @@ button {
     place-content: center;
     border: 1px solid black;
     cursor: pointer;
-    font-size: 3rem;
+    padding: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    font-size: calc(3rem + 200%);
 }
-
 .board-tile:hover {
     background: radial-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .1) 100%)
 }
